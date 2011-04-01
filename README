@@ -1,0 +1,49 @@
+# CLI utility to fetch parameter values from a TDC solar controller
+#
+# Copyright (c) 2011 Neil Jarvis (neil@jarvis.name)
+#
+# Usage:
+#
+#  Show all available parameters and their values:
+#   tdc.pl -tdcAddr=192.168.1.50
+#
+#  List all available parameters from controller:
+#   tdc.pl -tdcAddr=192.168.1.50 -list
+#
+#  Fetch values for specific parameters from controller:
+#   tdc.pl -tdcAddr=192.168.1.50 sensor0 relais0
+#
+#  Fetch value for a single parameter and output in MRTG format:
+#   tdc.pl -tdcAddr=192.168.1.50 -mrtg=sensor0
+# 
+#  Fetch the LCD image and output to a PNG file called lcd.png:
+#   tdc.pl -tdcAddr=192.168.1.50 -lcd=lcd.png
+#
+#  Fetch the LCD image 1000 times in a row and output to a sequence of PNG files called lcd0001.png, lcd0002.png etc.:
+#   tdc.pl -tdcAddr=192.168.1.50 -lcd=lcd%04d.png -lcdCount=1000
+#
+# Advanced usage:
+#   
+#  Turn on debug (for any command): -debug
+#
+#  Execute a specific command: -proto=x -cmd="yyy"  (Use Ctrl-C to terminate)
+#   - For example, to get device version string: 
+#      tdc.pl -tdcAddr=192.168.1.50 -proto=0 -cmd="v?"
+#
+#########################################
+#
+# This program is free software; you can redistribute it and/or modify 
+# it under the terms of the GNU General Public License as published by 
+# the Free Software Foundation; either version 2 of the License, or 
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+# or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+# for more details.
+# 
+# You should have received a copy of the GNU General Public License along 
+# with this program; if not, write to the Free Software Foundation, Inc., 
+# 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+#
+#########################################
